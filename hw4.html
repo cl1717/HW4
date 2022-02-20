@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Joe's Hotdog Stand</title>
+</head>
+
+<body>
+  <script language="javascript">
+    hotdogs = prompt("How many hotdogs would you like to order?", "");
+    fries = prompt("How many fries would you like to order?", "");
+    sodas = prompt("How many sodas would you like to order?", "");
+    originalSubtotal = hotdogs * 3.75 + fries * 2 + sodas * 1.8;
+    discountAmount = 0;
+    if (originalSubtotal >= 20){
+      discountAmount = originalSubtotal * 0.1;
+    }
+    discountedSubtotal = originalSubtotal - discountAmount;
+    tax = discountedSubtotal * 0.0625;
+    finalSubtotal = discountedSubtotal + tax;
+
+    
+    document.write("Your Order: ");
+    document.write("<br>");
+    document.write("Hotdogs: " + hotdogs);
+    document.write("<br>");
+    document.write("Fries: " + fries);
+    document.write("<br>");
+    document.write("Sodas: " + sodas);
+    document.write("<br>");
+    document.write("<br>");
+    document.write("Subtotal: ");
+    document.write("<br>");
+    document.write("$" + originalSubtotal.toFixed(2));
+    document.write("<br>");
+    document.write("<br>");
+    document.write("Discount Amount: ");
+    document.write("<br>");
+    document.write("$" + discountAmount.toFixed(2));
+    document.write("<br>");
+    document.write("<br>");
+    document.write("Subtotal (before tax): ");
+    document.write("<br>");
+    document.write("$" + discountedSubtotal.toFixed(2));
+    document.write("<br>");
+    document.write("<br>");
+    document.write("Tax: ");
+    document.write("<br>");
+    document.write("$" + tax.toFixed(2));
+    document.write("<br>");
+    document.write("<br>");
+    document.write("Total (final): ")
+    document.write("<br>");
+    document.write("$" + finalSubtotal.toFixed(2));
+    document.write("<br>");
+    document.write("<br>");
+
+  </script>
+
+</body>
+
+</html>
